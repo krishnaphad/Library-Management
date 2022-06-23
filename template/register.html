@@ -1,0 +1,22 @@
+
+{% block content %} 
+
+{% load crispy_forms_tags %}
+
+<!--Register--> 
+
+<div style="padding-top:20px ; padding-left:550px ; background-color:aquamarine ; ">
+	<h1 style="color:darkslategrey ;" >Admin SignUp</h1>
+	<form method="POST">
+		{% csrf_token %}
+		<!-- {{ register_form|crispy }} -->
+		{{ register_form|crispy }}
+		<div style="padding-top:10px ;" >
+			<button  type="submit">SignUp</button>
+		</div>                    
+		
+	</form>
+	<p>If you already have an account, <button style="background-color:aqua ;"> <a href="/login" > <strong> Login </strong> </a> </button> instead.</p>
+</div>
+
+{% endblock %}
